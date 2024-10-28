@@ -1,0 +1,46 @@
+
+@import url(../reset.css);
+
+.container{
+  border: 4px solid blue;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 600px;
+  padding: 20px 10px 0;
+}
+.container .bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.container .title{ 
+  /* border: 3px solid #000; */
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* background: green; */
+}
+.container .title p{
+  margin: 0px;
+}
+.bottom .green-tea{
+  background: lightgray;
+  /* margin-right: 20px; */
+}
+.bottom .coffee{
+  background: lightpink;
+  /* margin-left: 20px; */
+}
+.bottom p{
+  text-align: left;
+}
+.container article{
+  
+    /* border: 3px solid #000; */
+    width: 46%;
+    margin-bottom: 10px;
+    padding: 10px;
+}

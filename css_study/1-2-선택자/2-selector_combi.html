@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일치선택자(복합선택자)</title>
+  <style>
+    span.orange{
+      color: orange
+    }
+    
+    li#apple.red{
+      background: red;
+    }
+
+    .yellow.low#change.primary{
+      background: orange;
+      color: red;
+    }
+  </style>
+</head>
+<!-- class,id-전역속성 -->
+ <!-- id는 중복부여x id 중복사용x 유일한 요소에만 사용 -->
+<body>
+  <!--  div>ul>li*3 -->
+  <div>
+    <ul>
+      <li id="apple" class="red">사과</li>
+      <li class="orange">오렌지</li>
+      <li class="red">체리</li>
+    </ul>
+
+    <!-- div+p+span -->
+    <div class="yellow low primary" id="change">당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span>
+  </div>
+</body>
+</html>

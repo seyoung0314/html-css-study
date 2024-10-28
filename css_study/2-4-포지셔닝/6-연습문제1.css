@@ -1,0 +1,37 @@
+@import url(../reset.css);
+
+section{
+  width: 50%;
+  border: 2px solid #ccc;
+  background: pink;
+  padding: 10px;
+  margin: 30px auto;
+  position: relative;
+}
+
+section h1{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #080;
+  margin-bottom: 15px;
+}
+section .content{
+  padding-left: 10px;
+}
+section .content li{
+  padding-bottom: 5px;
+}
+section .content li a{
+  color: #666;
+}
+section .content li a:hover{
+  color: #00f;
+  text-decoration: underline;
+}
+section .more{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00f;
+  text-decoration: underline;
+}

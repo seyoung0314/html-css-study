@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 50px;
+    /* :hover말고 원본에 작성 
+        :hover에 걸면 복구할때 작동안함*/
+    /* transition: property duration delay timing-function; */
+    /* defalt = all 0s ease */
+    transition-property: all;
+    transition-duration: 3s;
+    transition-delay: .5s;
+    transition-timing-function: steps(4);
+  }
+  .box:hover{
+    width: 300px;
+    background: greenyellow;
+  }
+</style>
+<body>
+  <div class="box"></div>
+</body>
+</html>

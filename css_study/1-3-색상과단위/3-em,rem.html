@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- html  기본 16px -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <STYle>
+    html{
+      font-size: 30;
+    }
+    body{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    div{
+      border: 2px solid blue
+    }
+    .root{
+      /* 10em = 200px */
+      /* em : 폰트크기 대비 */
+      font-size: 20px;
+      width: 10cm;
+    }
+    .parent{
+      font-size: 20px;
+      /*  html태그 폰크크기 대비 */
+      width: 10rem;
+    }
+ 
+     
+</STYle>
+</head>
+<body>
+  <div class="root">ROOT
+    <div class="parnt">PARENT
+      <div class="child"></div>CHILD1
+      <div class="child"></div>CHILD2
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,411 @@
+@import url('../../reset.css');
+
+br.mo {
+  display: none;
+}
+
+/* header style */
+header {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+header .inner-header {
+  /* border: 3px solid tomato; */
+  width: 84%;
+  margin: 0 auto;
+}
+
+header .inner-header .logo {
+  /* border: 3px solid violet; */
+  float: left;
+  width: 200px;
+}
+header .inner-header .logo img {
+  width: 100%;
+}
+
+header .inner-header .gnb {
+  /* border: 3px solid red; */
+  float: left;
+  margin-left: 80px;
+}
+header .inner-header .gnb li {
+  /* border: 3px dashed yellow; */
+  float: left;
+  margin-right: 80px;
+}
+
+header .inner-header .gnb li a {
+  /* background: red; */
+  display: block;
+  color: #fff;
+  font-size: 16px;
+}
+header .inner-header .gnb li a:hover {
+  color: #ff8342;
+}
+
+header .inner-header .tnb {
+  /* border: 3px solid blue; */
+  float: right;
+  color: #fff;
+  font-size: 16px;
+}
+header .inner-header .tnb li {
+  float: left;
+  margin-right: 25px;
+}
+header .inner-header .tnb li:first-child i,
+header .inner-header .tnb li:nth-child(2) i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+header .inner-header .tnb li:last-child a {
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+header .inner-header .tnb li:last-child a:hover {
+  background: #fff;
+  color: #ff8342;
+}
+
+header .inner-header .tnb li:last-child i {
+  margin-left: 5px;
+}
+
+header .inner-header .gnb-mobile {
+  display: none;
+}
+
+/* section.main style */
+section.main {
+  background: url('https://kokokaki.github.io/img/vis_4.jpg') no-repeat center/cover fixed;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.main .main-title {
+  /* background: red; */
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 10px #123;
+}
+
+section.main .main-title h2 {
+  font-size: 55px;
+}
+section.main .main-title p {
+  font-size: 25px;
+  margin: 20px 0;
+}
+section.main .main-title .view {
+  font-size: 15px;
+  letter-spacing: 2px;
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 8px 0;
+  overflow: hidden;
+
+  position: relative;
+}
+section.main .main-title .view::after {
+  content: '';
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+section.main .main-title .view:hover::after {
+  width: 100%;
+}
+
+section .title {
+  text-align: center;
+}
+
+section .title h2 {
+  font-size: 45px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+section .title p {
+  font-size: 18px;
+  color: #555;
+}
+
+.sub-container {
+  /* background: orange; */
+  width: 74%;
+  margin: 0 auto;
+}
+
+/* about 영역 */
+section.about {
+  margin: 80px 0;
+}
+
+section.about ul.sub-container {
+  border-bottom: 2px solid #ddd;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+section.about ul.sub-container li {
+  /* border: 3px solid blue; */
+  width: 33.333%;
+}
+section.about ul.sub-container li a .img-box {
+  /* border: 4px solid yellowgreen; */
+  height: 350px;
+  overflow: hidden;
+}
+section.about ul.sub-container li a .img-box img {
+  width: 100%;
+  transition: 0.7s;
+}
+
+section.about ul.sub-container li a:hover .img-box img {
+  transform: scale(1.2);
+}
+
+section.about ul.sub-container li .text {
+  /* border: 3px solid blue; */
+  padding: 25px;
+}
+section.about ul.sub-container li .text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+section.about ul.sub-container li .text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+section.about ul.sub-container li .text .more {
+  /* lowercase : 일괄 소문자 변경 */
+  text-transform: uppercase;
+  font-weight: 700;
+  /* border: 2px solid #000; */
+  position: relative;
+  padding-left: 40px;
+}
+
+section.about ul.sub-container li .text .more::before {
+  content: '→';
+  width: 30px;
+  height: 30px;
+  background: #ff8342;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+
+/* innovation 영역 */
+section.innovation{
+  /* background: orange; */
+  margin-bottom: 150px;
+}
+section.innovation .img-box{
+  background: 
+    url(https://kokokaki.github.io/img/product_1.jpg)
+    no-repeat center/cover; 
+    margin-top: 50px;
+  height: 540px;
+  position: relative;
+}
+section.innovation .img-box .inner{
+  /* border: red 3px solid; */
+  width: 80%;
+  background: #3a3c4e;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  /* 중앙배치 */
+  transform: translate(-50%, 0%);
+
+  bottom: -20%;
+}
+section.innovation .img-box .inner h3 {
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  padding: 25px 45px;
+}
+section.innovation .img-box .inner .bottom {
+  padding: 35px 85px;
+  display: flex;
+  justify-content: space-between;
+}
+section.innovation .img-box .inner .bottom p{
+  /* background: red; */
+  width: 70%;
+  line-height: 1.5;
+}
+section.innovation .img-box .inner .bottom a{
+  background: #ff9342;
+  padding: 7px 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.innovation .img-box .inner .bottom a:hover{
+  background: #f86010;
+}
+
+section.me{
+  background: 
+    url(https://kokokaki.github.io/img/me.jpg)
+    no-repeat center/cover;
+    padding: 80px 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+section.me .title{
+  margin-bottom: 50px;
+}
+
+section.me .list{
+  border-top: #111 solid 3px;
+  border-bottom: #111 solid 3px;
+}
+section.me .list > li:first-child {
+  border-bottom: 1px lightgray solid;
+}
+section.me .sub-container>li{
+  font-weight: 700;
+  position: relative;
+  padding-left: 50px;
+}
+section.me .sub-container li h3{
+  padding-bottom: 20px;
+  padding-top: 30px;
+
+}
+section.me .sub-container + li h3 span i{
+  background: orange;
+  border-top : 1px solid #000;
+}
+section.me .sub-container li h3 span{
+  color: #ff9342;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+section.me .sub-container li p{
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+section.me .sub-container li .more{
+ display: block;
+ margin-top: 20px;
+ margin-bottom: 30px;
+  i{
+    color: #ff9342;
+  }
+}
+section.me .sub-container .in em{
+  width: 100px;
+  margin-right: 60px;
+}
+
+section.me .sub-container .in p{
+ text-align: left;
+}
+section.me .sub-container li .in li{
+  display: flex;
+  
+}
+section.me #incruit-btn{
+  background: #ff9342;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 80px;
+  margin-top: 40px;
+  margin-left: 50%;
+}
+
+section.sns{
+ 
+}
+section.sns .title{
+  margin-top: 300px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+section.sns>.sub-container{
+  display: flex;
+  justify-content: center;
+}
+section.sns.sub-container li{
+  
+}
+section.sns .sub-container li a .img-box{
+  width: 500px;
+  height: 280px;
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+
+}
+section.sns .sub-container li a .img-box img{
+  width: 100%;
+}
+section.sns .sub-container li a:hover .img-box::before{
+  opacity: 0.3;
+  width: 100%;
+}
+section.sns .sub-container li a .img-box::before{
+  content:"";
+  width: 0%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+section.sns .sub-container li a .img-box::after{
+  content: "BLOG";
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid #fff;
+  width: 200px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+}
+section.sns .sub-container li a:hover .img-box::after{
+  opacity: 1;
+}

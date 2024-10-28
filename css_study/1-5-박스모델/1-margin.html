@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .container{
+      width: 400px;
+      height: 300px;
+      border: 4px solid red;
+      margin-left: 40px;
+      margin-top: 50px;
+    }
+    .box{
+      width: 25%;
+      height: 100px;
+      border: 4px solid gray;
+      background: #333;
+    }
+    /* 마진은 여백으로 따로 스타일을 지정할 순 없음 */
+    .box:first-child{
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+    .box:last-child{
+      /* 개별 속성 */
+      margin-top: 20px;
+      margin-left: 50px;
+      margin-right: 10px;
+      margin-bottom: 50px;
+      /* 단축 속성 */
+      /* 모든방향 마진 */
+      margin: 7px;
+      /* margin: 상하 좌우 */
+      margin: 10px 20px;
+      /* 상 좌우 하 */
+      margin: 10px 20px 30px;
+      /* 상 우 하 좌 (시계방향)*/
+      margin: 10px 20px 30px 40px;
+    }
+    *:not(){
+      background: yellow;
+    }
+    section{
+      width: 80%;
+      border: 4px solid red;
+      margin-left: 10%;
+    }
+    section h1{
+      width: 40%;
+      background: orange;
+      text-align: center;
+      /* 마진 자동분배 */
+      /* margin-left: auto; */
+      /* margin-right: auto; */
+      margin: 20px auto;
+    }
+    section h2{
+      width: 50%;
+      background: aqua;
+      margin: 0 auto 20px ;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h1>안녕하세요</h1>
+    <h2>메롱메롱</h2>
+  </section>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>

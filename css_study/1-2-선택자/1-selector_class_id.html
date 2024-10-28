@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* .class #id */
+    .orange{
+      color: orange;
+    }
+    /* 기본 size :16px, weight : 350 */
+    .big{
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .highlight{
+      text-shadow: 2px 2px 5px yellow;
+    }
+    .tom{
+      background: tomato;
+    }
+
+    #grape{
+      color: violet;
+      background: pink;
+    }
+  </style>
+</head>
+<!-- class,id-전역속성 -->
+ <!-- id는 중복부여x id 중복사용x 유일한 요소에만 사용 -->
+<body>
+  <!--  div>ul>li*3 -->
+  <div>
+    <ul>
+      <li class="highlight">사과</li>
+      <li id="grape" class="big">포도</li>
+      <li class="orange">오렌지</li>
+    </ul>
+
+    <!-- div+p+span -->
+    <div>당근</div>
+    <p class="big highlight tom">토마토</p>
+    <span class="orange big">오렌지</span>
+  </div>
+</body>
+</html>

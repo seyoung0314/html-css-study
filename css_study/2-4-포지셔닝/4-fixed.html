@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 5000px;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid green;
+
+      /* position을 정의하면 가로길이 100%가 해제됨
+         fixed는 항상 브라우저 전체 기준 */
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      
+      /* z축위치변경해서 앞으로 */
+      z-index: 10;
+      background: wheat;
+      /* 투명색 */
+      /* background: transparent; */
+    }
+    header .logo{
+      font-size: 40px;
+      padding: 0;
+      margin: 20px 20px 30px;
+      /* border: 1px solid #000; */
+    }
+    header nav ul{
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+      display: flex;
+      margin-right: 20px;
+    }
+    header nav ul li{
+      margin-right: 30px;
+    }
+    .ad-banner{
+      width: 150px;
+      height: 600px;
+      background: gray;
+
+      position: absolute;
+      right: 30px;
+      top: 150px;
+
+      z-index: 5;
+    }
+    /* sticky : 부모요소의 스크롤 범위내에서 고정
+       fixed :  스크롤에 관계없이 뷰포트에 고정 */
+    .content{
+      margin-top: 500px;
+      position: sticky;
+      top: 200px;
+    }
+  </style>
+</head>
+<body>
+  <!-- header>h1.logo+(nav>ul>li*4) -->
+  <header>
+    <h1 class="logo">로고</h1>
+    <nav>
+      <ul>
+        <li>소개</li>
+        <li>커뮤니티</li>
+        <li>자료실</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <p class="content">
+      안녕하세요
+    </p>
+  </main>
+  <aside class="ad-banner">광고</aside>
+</body>
+</html>

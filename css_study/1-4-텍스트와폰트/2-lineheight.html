@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      padding: 10px;
+      font-style: 20px;
+      /* 1.5~1.6 추천 */
+      line-height: 1.5;
+      /* 여러줄일 때 양쪽 정렬 */
+      text-align: justify;
+      /* 들여쓰기 */
+      text-indent: 10px;
+      /* 띄어쓰기 간격 조절 */
+      word-spacing: 20px;
+      /* 글자 굵기 */
+      /* font-weight: bold; */
+    }
+      /* 강조했지만 글자굵기는 기본 */
+    strong{
+      /* 100단위로 사용 100~900 */
+      font-weight: normal;
+    }
+    h1{
+      text-align: center;
+      /* 선 긋기 */
+      text-decoration: underline;
+      /* 자간 - 스페이스쓰면 여러번해도 한번으로 인식*/
+      letter-spacing: 7px;
+    }
+    span.textmain *:not(span){
+      background: greenyellow;
+    }
+    .textmain *:not(span){
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>안녕하세요</h1>
+  <p>
+    <span class="textmain">
+      <strong>저작자·발명가·과학기술자</strong>와 <span>예술가의 권리</span>는 법률로써 보호한다. 여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다.
+      
+      체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.
+    </span>
+
+  </p>
+</body>
+</html>

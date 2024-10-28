@@ -1,0 +1,152 @@
+@import url(../reset.css);
+
+body{
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+}
+header nav{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 10vh;
+}
+header nav .logo img{
+  /* border: 1px solid #000; */
+  width: 100px;
+  margin: 10px;
+}
+header nav .search-bar{
+  /* border: 1px solid blue; */
+  width: 50%;
+}
+header nav .search-bar input{
+  width: 100%;
+  font-size: 16px;
+}
+header nav .nav-icons{
+  /* border: 1px solid #000; */
+  padding-right: 10px;
+}
+header nav .nav-icons a{
+  padding-left: 10px;
+}
+main .content-container{
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  /* border: 1px solid #000; */
+  margin-top: 10vh;
+  flex: 1;
+}
+main .content-container .left-column{
+  /* background: #787; */
+  margin-right: 15px;
+}
+main .content-container .left-column .post{
+  border: 2px solid #ddd;
+  /* background: #dad; */
+  display: block;
+  margin-bottom: 30px;
+}
+main .content-container .left-column .post .post-header{
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+main .content-container .left-column .post .post-header img{
+  border-radius: 50%;
+  margin: 10px;;
+}
+main .content-container .left-column .post .post-actions{
+  background: #fff;
+  padding: 10px;
+}
+main .content-container .left-column .post .post-caption{
+  background: #fff;
+  strong{
+    font-weight: 700;
+  }
+  padding: 10px;
+}
+main .content-container .right-column{
+  /* background: orange; */
+  height: fit-content;
+  width: auto;
+}
+main .content-container .right-column .profile-info{
+  /* border: 1px solid #000; */
+  display: flex;
+  margin-bottom: 20px;
+}
+main .content-container .right-column .profile-info img{
+  border-radius: 50%;
+}
+main .content-container .right-column .profile-info div{
+  padding-left: 10px;
+  strong{
+    font-weight: 700;
+  }
+}
+main .content-container .right-column .suggestions{
+  /* border: 1px solid #000; */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+main .content-container .right-column .suggestions h4{
+  padding: 20px 0 20px 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+main .content-container .right-column .suggestions .suggestion{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+}
+main .content-container .right-column .suggestions .suggestion img{
+  border-radius: 50%;
+  padding: 10px;
+}
+main .content-container .right-column .suggestions .suggestion div{
+  /* border: 1px solid #000; */
+  strong{
+    font-weight: 700;
+  }
+}
+main .content-container .right-column .suggestions .suggestion button{
+  color: #fff;
+  background: dodgerblue;
+  border-radius: 2px;
+  border: none;
+  margin: 10px 10px 0 10px;
+  padding: 5px;
+}
+
+footer{
+  /* border: 1px solid red; */
+  background: #eee;
+  border-top: 3px solid #ddd;
+  height: 50px;
+}
+footer ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 30px 0;
+  margin: auto 35%;
+}
+footer ul li{
+  /* border: 1px solid #000; */
+  color: dodgerblue;
+  font-weight: 700;
+}

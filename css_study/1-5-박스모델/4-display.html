@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .box{
+      margin-top: 50px;
+    }
+    /* input,img 는 인라인블록형태 */
+    /* inline-block은 너비와 높이가 지정가능,마진패딩가능 */
+    .box input{
+      display: inline-block;
+    }
+    .box input:nth-child(3){
+      background: gold;
+      /* 화면에서 사라짐, 토글링할때 사용 */
+      /* display: none; */
+      /* 투명도 0~1 화면에서 안보이게*/
+      opacity: 1;
+      transition: 0.3s;
+    }
+    .box input:nth-child(3):hover{
+      opacity: 0;
+    }
+    .click{
+      margin-left: 20px;
+      border: 2px solid #000;
+      width: 100px;
+      height: 50px;
+      /* padding: 7px 14px; */
+      border-radius: 10px;
+    }
+    .click a{
+      width: 100%;
+      height: 100%;
+      font-weight: 700;
+      text-decoration: none;
+      color: gray;
+      background: orange;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <span>안녕</span>
+  <div class="box">
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input type="text" value="3">
+    <input type="text" value="4">
+    <input type="text" value="5">
+  </div>
+  <div class="click">
+    <a href="">click me!</a>
+  </div>
+  <div class="click2">
+    <a href="">click me!</a>
+  </div>
+</body>
+</html>

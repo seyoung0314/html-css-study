@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .root {
+        width: 600px;
+        height: 400px;
+        border: 4px dashed orange;
+        padding: 100px;
+        font-size: 30px;
+
+      }
+      .parent {
+        width: 400px;
+        height: 300px;
+        border: 4px dashed blue;
+        padding: 50px;
+        position: relative;
+      }
+      .child {
+        width: 120px;
+        height: 80px;
+        border: 4px dashed red;
+        border-radius: 10px;
+        background: yellowgreen;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pos {
+        /* 절대위치에서 이동, 부모의 포지션 기준
+         (가까운 부모중 position속성이 있는 부모 기준. 없으면 body)
+         z축앞으로 튀어나온 모양 (원래자리가 비니까 채워짐)*/
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+      }
+
+      .root .parent .child:nth-child(3){
+        position: relative;
+        
+      }
+      .root .parent .child:nth-child(3):hover{
+        .button button{
+          display: inline;
+        }
+      }
+
+      .button button{
+        width: 50px;
+        height: 50px;
+        border: none;
+        background: red;
+        border-radius: 50%;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="parent">
+        <div class="child">1</div>
+        <div class="child pos">2</div>
+        <div class="child">3
+          <div class="button">
+            <button>X</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

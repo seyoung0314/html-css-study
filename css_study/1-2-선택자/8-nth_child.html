@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상선택자2</title>
+  <style>
+    #fruits li:first-child {
+      color: red;
+    }
+
+    #fruits li:last-child {
+      color: greenyellow;
+    }
+    /* n은 1부터 시작 */
+    #fruits li:nth-child(4) {
+      color: orange;
+    }
+    /*  홀수 */
+    /* n=0 */
+    #fruits li:nth-child(2n-1) {
+      font-style: italic;
+    }
+    #fruits li:nth-child(odd) {
+      font-style: italic;
+    }
+    /*  짝수 */
+    #fruits li:nth-child(2n) {
+      background: yellow;
+    }
+    #fruits li:nth-child(even) {
+      background: yellow;
+    }
+
+    #fruits li:nth-child(n+3) {
+      font-size: 24px;
+    } 
+
+    /* 10 + 10 = 20점 */
+    .sports :nth-child(3){
+      background: brown;
+    }
+    /* 10 + 10 = 20점 */
+    .sports:nth-child(3){
+      background: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div class="sports">
+    <div>축구</div>
+    <div>야구</div>
+    <div>농구</div>
+    <div>배구</div>
+    <div>농구</div>
+  </div>
+  <div class="sports">
+    <div>축구</div>
+    <div>야구</div>
+    <div>농구</div>
+    <div>배구</div>
+    <div>농구</div>
+  </div>
+  <div class="sports">
+    <div>축구</div>
+    <div>야구</div>
+    <div>농구</div>
+    <div>배구</div>
+    <div>농구</div>
+  </div>
+
+  <ul id="fruits">
+    <li>딸기</li>
+    <li>망고</li>
+    <li>사과</li>
+    <li>오렌지</li>
+    <li>바나나</li>
+    <li>자몽</li>
+    <li>라임</li>
+  </ul>
+</body>
+</html>

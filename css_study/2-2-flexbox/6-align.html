@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        /* 자식들의 속성이 flexitem이 된다. 기본값은 가로배치 */
+        display: flex;
+        border: 2px red solid;
+        padding: 20px 0;
+        font-size: 30px;
+        /* row : 주축이 가로(x축)
+         columm : 추축이 세로(y축) */
+        /* flex-flow(option,option)
+       flex-direction + flex-wrap */
+        /* flex-flow: row wrap; */
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* 주축정렬 defalt : flex-start */
+        justify-content: center;
+        /* 교차축 정렬 : 주축의 수직되는 축 */
+        height: 800px;
+        /* 한줄일 때 주로사용 */
+        align-items: center;
+        /* 두줄 이상일 때 주로사용 */
+        /* align-content: center; */
+      }
+      .item {
+        margin-left: 10px;
+        width: 300px;
+        height: 100px;
+        border: 2px solid orange;
+        border-radius: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item:nth-child(2) {
+        align-self: flex-start;
+      }
+      .item:nth-child(3) {
+        align-self: flex-end;
+      }
+      .item:nth-child(5) {
+        /* stretch를 사용하려면 높이가 고정되어있으면 안됨 */
+        height: auto;
+        align-self: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">a</div>
+      <div class="item">b</div>
+      <div class="item">c</div>
+      <div class="item">d</div>
+      <div class="item">e</div>
+    </div>
+  </body>
+</html>

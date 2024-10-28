@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성선택자</title>
+  <!-- html문서에 접근권한이 없어서 class나 id를 지정해주지 못한다면 -->
+ <style>
+  [type="password"]{
+    color: red;
+  }
+
+  [type]{
+    width: 100px;
+  }
+
+  [disabled]{
+    background: darkorange;
+  }
+
+  div.apple #lion[value="1234"]{
+    color: blue;
+  }
+
+  div.apple#lion2[value="1234"]{
+    color: green;
+  }
+ </style>
+
+</head>
+<body>
+  <img src="#" alt="">
+  <audio src="#"></audio>
+
+  <div class="apple">
+    <div class="apple" id="lion" value="1234">라이언</div>
+  </div>
+  <div class="apple" id="lion2" value="1234">라이언</div>
+
+  <div>
+    <input type="text" value="hello">
+    <input type="password" value="1234">
+    <input type="text" value="사용불가" disabled>
+  </div>
+</body>
+</html>

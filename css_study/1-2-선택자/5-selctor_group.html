@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>형제 선택자</title>
+
+  <style>
+    /* 인접 형제 선택자 (+) */
+    /* orange 클래스를 가지고 있는 태그를 형으로 둔 li */
+    .orange + li{
+      background: orange;
+    }
+    div.type1 > ul > li + li{
+      background: gray;
+    }
+    tr + tr{
+      background: palegreen;
+    }
+    /* 일반 형제 선택자 (~)  */
+    /* 바로 위 요소만이 아닌 모든 형제 요소들을 선택 */
+    div.type2 > ul > .red ~ li{
+      background: gold;
+    }
+
+    /* 그룹선택자 */
+  </style>
+</head>
+<body>
+  <div class="type1">
+    <ul>
+      <li class="orange">오렌지</li>
+      <li>사과</li>
+      <li>딸기</li>
+      <li class="orange">오렌지2</li>
+      <li class="red">자몽</li>
+      <li>포도</li>
+      <li>레몬</li>
+    </ul>
+  </div>
+
+
+  <div class="type2">
+    <ul>
+      <li class="orange">오렌지</li>
+      <li>사과</li>
+      <li>딸기</li>
+      <li class="orange">오렌지2</li>
+      <li class="red">자몽</li>
+      <li>포도</li>
+      <li>레몬</li>
+    </ul>
+  </div>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

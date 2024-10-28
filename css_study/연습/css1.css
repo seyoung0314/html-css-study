@@ -1,0 +1,16 @@
+ul{
+  list-style: none;
+  text-align: center;
+}
+li{
+  padding: 20px;
+}
+li:nth-child(odd){
+  background: blue;
+}
+li:nth-child(even){
+  background: yellow;
+}
+li:hover{
+  background: green;
+}

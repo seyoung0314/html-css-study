@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid green;
+        text-align: center;
+        padding: 7px;
+      }
+      th {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1번 -->
+    <h1>쇼핑 목록</h1>
+    <tbody>
+      <table>
+        <tr>
+          <th>제품 이름</th>
+          <th>가격</th>
+        </tr>
+        <tr>
+          <td>새우깡</td>
+          <td>1200원</td>
+        </tr>
+        <tr>
+          <td>바나나킥</td>
+          <td>1700원</td>
+        </tr>
+      </table>
+    </tbody>
+
+    <!-- 2번,3번 문제 -->
+    <h1>회원 가입</h1>
+    <form>
+      <label for="name"
+        >이름
+        <input type="text" required />
+      </label>
+
+      <label for="password"
+        >비밀번호
+        <input type="password" required />
+      </label>
+      <label for="email"
+        >이메일
+        <input type="email" required />
+      </label>
+      <br />
+      <label>
+        <textarea name="intro"></textarea>
+      </label>
+      <button>확인</button>
+    </form>
+
+    <!-- 4번 문제 -->
+    <h1>연락처 정보</h1>
+    <form>
+      <label for="phone_number"></label>
+      <select>
+        <option value="">010</option>
+        <option value="">02</option></select
+      >- <input type="text" maxlength="4" value="" pattern="[0-9]{4}" />-
+      <input type="text" maxlength="4" required value="" pattern="[0-9]{4}" />
+      <button type="submit">확인</button>
+    </form>
+    <form>
+      <label for="phone_number">
+        <!-- tel형식은 숫자키보드 -->
+        <input type="tel" required
+        pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        <small>형식 : 000-0000-0000</small>
+      </label>
+      <button>확인</button>
+    </form>
+  </body>
+</html>

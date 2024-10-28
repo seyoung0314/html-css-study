@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      margin: 100px;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background: orange;
+      border: 4px dashed red;
+      font-size: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box:nth-child(2){
+      background: yellowgreen;
+      /* 마진주는것처럼 이동, 
+      원래 위치에 기반, 다른 요소에 영향을 주지 않음 */
+      position: relative;
+      bottom: 50px;
+      left: 50px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <box class="box">1</box>
+    <box class="box">2</box>
+    <box class="box">3</box>
+  </div>
+</body>
+</html>

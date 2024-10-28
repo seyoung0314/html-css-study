@@ -1,0 +1,35 @@
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
+*{
+  box-sizing: border-box;
+}
+a{
+  /* 부모에게 상속 */
+  color: inherit;
+  text-decoration: none;
+}
+ul{
+  background: lightgray;
+  width: 70%;
+  margin: 20px auto;
+  color: white;  
+  padding: 15px;
+}
+ul li{
+  /* border: 1px solid black; */
+  margin-bottom: 10px;
+}
+ul li:last-child{
+  margin-bottom: 0;
+}
+ul li a{
+  font-size: 1.5rem;
+  font-weight: 700px;
+  /* a태그는 inline요소가 기본이라 block으로 변경해서 사용 */
+  display: block;
+  padding: 15px;
+  
+}
+ul li a:hover{
+  color: yellow;
+  background: skyblue;
+}

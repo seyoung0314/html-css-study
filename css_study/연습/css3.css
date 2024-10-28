@@ -1,0 +1,107 @@
+/* *{
+  box-sizing: border-box;
+}
+article{
+  display: inline-block;
+  width: 150px;
+  height: 300px;
+  border: 2px black solid;
+  padding: 10px 20px;
+}
+article:nth-child(odd){
+  background: blue;
+  color: white;
+}
+
+article:nth-child(even){
+  background: red;
+  color: white;
+}
+article:hover{
+  transform: scale(1.1);
+  color: black;
+  box-shadow: 10px 10px yellow;
+}
+.title{
+  display: flex;
+  justify-content: center;
+}
+.content{
+  display: flex;
+  align-items: center;
+} */
+
+/* 카드 리스트 컨테이너 */
+.card-list {
+  display: flex;
+  justify-content: space-between; /* 카드 간격 자동 조정 */
+  padding: 20px;
+  flex-wrap: wrap; /* 카드가 한 줄에 다 들어가지 않으면 다음 줄로 이동 */
+}
+
+/* 개별 카드 스타일 */
+.card {
+  width: 30%; /* 카드 너비 */
+  max-width: 300px; /* 최대 너비 제한 */
+  height: 300px; /* 카드 높이 고정 */
+  background-color: red; /* 기본 배경색 */
+  border-radius: 10px;
+  overflow: hidden; /* 카드 밖으로 이미지가 넘치지 않게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 기본 그림자 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* 홀수 카드 배경색은 빨강 */
+.card:nth-child(odd) {
+  background-color: red;
+}
+
+/* 짝수 카드 배경색은 파랑 */
+.card:nth-child(even) {
+  background-color: blue;
+}
+
+/* 카드에 마우스를 올렸을 때 애니메이션 */
+.card:hover {
+  transform: scale(1.05);  /* 카드 확대 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 강조 */
+}
+
+/* 카드 제목 스타일 */
+.card-title {
+  display: flex;
+  justify-content: center;  /* 수평 중앙 정렬 */
+  align-items: center;  /* 수직 중앙 정렬 */
+  height: 40px;  /* 제목 높이 */
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* 카드 설명 스타일 */
+.card-description {
+  display: flex;
+  justify-content: center;  /* 수평 중앙 정렬 */
+  align-items: center;  /* 수직 중앙 정렬 */
+  height: 60px;  /* 설명 높이 */
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+/* 이미지 스타일 */
+.card img {
+  width: 100%;
+  height: 200px;  /* 고정 높이 */
+  object-fit: cover;  /* 이미지 비율 유지 */
+  transition: transform 0.3s ease;  /* 이미지 확대 애니메이션 */
+}
+
+/* 이미지에 마우스를 올렸을 때 확대 */
+.card:hover img {
+  transform: scale(1.1);  /* 이미지 확대 */
+}

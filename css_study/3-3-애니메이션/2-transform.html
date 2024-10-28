@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background: orange;
+      font-size: 20px;
+      margin: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+    }
+    .box1:hover{
+      /* 회전효과 */
+      transform: rotate(360deg);
+    }
+    .box2:hover{
+      /* 이동효과 */
+      transform: translate(0, 100px);
+    }
+    .box3:hover{
+      /* 확대 축소 */
+      transform: scale(1.3);
+    }
+    .box4:hover{
+      /* 비틀기 */
+      transform: skew(20deg, 0);
+    }
+    .box5:hover{
+      transform: 
+        rotate(360deg)
+        translate(0,100px)
+        scale(1.5)
+        skew(20deg,0);
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">회전</div>
+  <div class="box box2">이동</div>
+  <div class="box box3">확대,축소</div>
+  <div class="box box4">비틀기</div>
+  <div class="box box5">단축</div>
+</body>
+</html>

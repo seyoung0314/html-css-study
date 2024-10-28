@@ -1,0 +1,462 @@
+@import url(../../reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+br.mo {
+  display: none;
+}
+.wrap {
+  font-size: 17px;
+  font-family: "Noto Sans KR", sans-serif;
+  /* color: #fff; */
+}
+/* headet style */
+header {
+  /* background: orange; */
+  /* fixed,absolte는 width재정의 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  font-weight: 700;
+  color: white;
+  padding: 20px 50px;
+
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+header .logo {
+  /* border: 4px solid blue; */
+  /* flex 요소들을 비율로 나눔 */
+  flex: 1;
+}
+header .logo img {
+  height: 60px;
+}
+
+header .intro {
+  /* border: 4px solid red; */
+  flex: 4;
+  margin-left: 30px;
+}
+
+header .menu-open {
+  /* border: 4px solid green; */
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .menu-open .menu-txt {
+  font-size: 20px;
+  margin-right: 15px;
+}
+header .menu-open .bar-icon {
+  font-size: 33px;
+}
+
+header .gnb {
+  /* display: none; */
+  /* border: 4px solid violet; */
+  background: #000;
+  color: #666;
+  height: 100vh;
+
+  font-size: 40px;
+  padding: 70px 100px;
+
+  position: fixed;
+  top: 0;
+  right: -100%;
+
+  display: flex;
+  flex-direction: row-reverse;
+
+  transition: 0.6s;
+}
+header .gnb.on {
+  right: 0;
+}
+header .gnb .close {
+  /* background: red; */
+  color: #fff;
+  display: block;
+}
+header .gnb ul {
+  /* background: bisque; */
+  margin-right: 200px;
+}
+header .gnb ul li {
+  font-weight: 700;
+  line-height: 1.7;
+}
+header .gnb ul li:hover {
+  color: #fff;
+}
+/* end header style */
+/* ---------------------------------- */
+
+/* main style */
+/* section visual style */
+section.visual {
+  background: url("../../img/img/visual1.jpg") no-repeat center/cover;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+section.visual .txt {
+  /* background: greenyellow; */
+  position: absolute;
+  top: 50%;
+  margin-left: 10%;
+  color: #fff;
+  text-shadow: 3px 3px 5px #000;
+  font-size: 18px;
+
+  z-index: 100;
+}
+section.visual .txt h3 {
+  margin: 30px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+/* 어둡게 */
+/* 가상의 복제태그 */
+section.visual::after {
+  /* 필수속성 */
+  content: "";
+
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.3;
+}
+section.content {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 120px 0;
+}
+section.content .main-txt {
+  /* background: orange; */
+  width: 80%;
+  margin: 0 auto 100px;
+  font-size: 27px;
+
+  display: flex;
+  position: relative;
+}
+section.content .main-txt::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: #ffec03;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 70px;
+  top: 100px;
+}
+section.content .main-txt::after {
+  content: "”";
+  font-size: 300px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+section.content .main-txt h3 {
+  /* border: 1px solid blue; */
+  flex: 1;
+  font-weight: 700;
+}
+section.content .main-txt p {
+  /* border: 1px solid red; */
+  flex: 2;
+  font-size: 25px;
+  line-height: 1.4;
+}
+section.content .main-txt p span {
+  display: block;
+  margin-top: 30px;
+  color: #999;
+  font-size: 22px;
+}
+section.content .project {
+  /* background: orange; */
+  margin-top: 200px;
+  margin-bottom: 60px;
+}
+section.content .project .top {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: 0 auto 60px;
+
+  display: flex;
+  justify-content: space-between;
+}
+section.content .project .top h3 {
+  /* background: aqua; */
+  font-size: 38px;
+  font-weight: 700;
+}
+section.content .project .top a {
+  /* background: violet; */
+  font-size: 20px;
+}
+section.content .project .bottom {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+}
+section.content .project .bottom li {
+  /* background: yellow; */
+  border: 1px solid #fff;
+  width: 24%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+section.content .project .bottom li a::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+section.content .project .bottom li a:hover::before {
+  width: 100%;
+  transition: 0.7s;
+}
+section.content .project .bottom li a img {
+  width: 100%;
+}
+section.content .project .bottom li a .name {
+  background: #1b1b1b;
+  color: #fff;
+  font-size: 24px;
+  text-align: right;
+  width: 250px;
+  padding: 15px;
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  opacity: 0;
+}
+section.content .project .bottom li a:hover .name {
+  animation: show-name both 1s;
+}
+@keyframes show-name {
+  0% {
+    opacity: 0;
+    bottom: -30px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
+section.content .partners {
+  /* background: orange; */
+  width: 80%;
+  margin: 170px auto 100px;
+}
+section.content .partners h3 {
+  font-size: 19px;
+  margin-bottom: 80px;
+}
+section.content .partners ul {
+  /* border: 1px solid #fff; */
+  display: flex;
+  flex-wrap: wrap;
+}
+section.content .partners ul li {
+  /* background: red; */
+  /* border: 1px solid yellow; */
+  width: 25%;
+  margin-bottom: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.content .partners ul li img {
+  opacity: 0.3;
+  transition: 0.4;
+}
+section.content .partners ul li img:hover {
+  opacity: 1;
+}
+section.content .contact {
+  background: url(../../img/img/contact.jpg) no-repeat center/cover fixed;
+  width: 90%;
+  padding: 220px 0;
+}
+section.content .contact .inner {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.4;
+}
+section.content .contact .inner .tel {
+  font-size: 58px;
+  font-weight: 700;
+  margin: 50px 0;
+}
+/* footer */
+footer {
+  background: #1b1b1b;
+  color: #999;
+  padding: 0 80px 80px;
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul li:nth-child(2) {
+  color: #eee;
+  font-size: 16px;
+  line-height: 2;
+}
+footer ul li:nth-child(2) span {
+  font-weight: 700;
+  margin-right: 10px;
+  color: #999;
+}
+#go-top {
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  font-size: 52px;
+}
+/* 큰 태블릿 반응형 디자인 */
+/* 1024px이하 */
+@media (max-width: 1024px) {
+  section.visual {
+    height: 60vh;
+  }
+
+  section.visual .txt {
+    z-index: 5;
+  }
+  section.visual .txt h3 {
+    font-size: 48px;
+  }
+
+  header .gnb {
+    width: 80vw;
+    z-index: 500;
+    padding: 200px 20px;
+    justify-content: center;
+  }
+
+  section.content .main-text h3 {
+    margin-right: 100px;
+    font-size: 22px;
+  }
+  section.content .main-text p {
+    font-size: 19px;
+  }
+
+  section.content .project .bottom {
+    flex-wrap: wrap;
+  }
+  section.content .project .bottom li {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  section.content .partners h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  section.content .partners ul li {
+    width: 50%;
+  }
+  section.content .partners ul li img {
+    opacity: 0.7;
+  }
+}
+/* 작은 휴대폰 반응형 디자인 */
+/* 375px이하 */
+@media (max-width: 375px) { 
+
+  .wrap {
+    width: 100vw;
+  }
+  header {
+    padding: 15px;
+  }
+  header .intro,
+  header .menu-open .menu-txt,
+  section.content .partners,
+  section.content .contact
+  {
+    display: none;
+  }
+  header .logo img {
+    height: 40px;
+  }
+  section.visual .txt {
+    font-size: 14px;
+  }
+  section.visual .txt h3 {
+    font-size: 20px;
+  }
+  section.content {
+    padding: 50px 0;
+  }
+  section.content .main-text {
+    flex-direction: column;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  section.content .main-text h3 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  section.content .main-text p {
+    text-align: justify;
+  }
+  section.content .main-text::before,
+  section.content .main-text::after {
+    display: none;
+  }
+  section.content .main-text p span {
+    font-size: 15px;
+  }
+  section.content .project {
+    margin-top: 50px;
+  }
+  section.content .project .top {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  section.content .project .top h3 {
+    font-size: 20px;
+  }
+  section.content .project .top h3 br {
+    display: none;
+  }
+  section.content .project .top a {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  section.content .project .bottom {
+    flex-direction: column;
+  }
+  section.content .project .bottom li {
+    width: 90%;
+    height: 250px;
+    margin: 0 auto 20px;
+  }
+}

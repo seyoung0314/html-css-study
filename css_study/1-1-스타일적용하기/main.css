@@ -1,0 +1,18 @@
+/* 태그선택자는 지양 */
+h1{
+  font-style: italic;
+  color: blue;
+  background-color: aqua;
+}
+li{
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+#apple{
+  background: red;
+}
+
+.big{
+  font-size: 60px;
+}

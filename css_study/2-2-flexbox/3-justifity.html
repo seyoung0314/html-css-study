@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      /* 자식들의 속성이 flexitem이 된다. 기본값은 가로배치 */
+      display: flex;
+      border: 2px red solid;
+      padding: 20px 0;
+      font-size: 30px;
+      /* row : 주축이 가로(x축)
+         columm : 추축이 세로(y축) */
+      flex-direction: row;
+      /* 주축정렬 defalt : flex-start */
+      justify-content: space-between;
+    }
+    .item{
+      margin-left: 10px;
+      width: 100px;
+      height: 100px;
+      border: 2px solid orange;
+      border-radius: 15px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">a</div>
+    <div class="item">b</div>
+    <div class="item">c</div>
+    <div class="item">d</div>
+    <div class="item">e</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Header</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* 긴 페이지 생성 */
+      font-family: Arial, sans-serif;
+    }
+
+    /* 헤더 스타일 */
+    header {
+      position: sticky;
+      top: 0; /* 스크롤 시 상단에 고정 */
+      background-color: lightcoral;
+      padding: 20px;
+      font-size: 24px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* 스크롤을 내리면 배경 색이 변경 */
+    header {
+      background-color: lightcoral;
+    }
+    header:sticky {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <header>헤더</header>
+  <div class="content">
+    <p>스크롤을 내리세요. 헤더가 상단에 고정됩니다.</p>
+    <div style="height: 1500px;">스크롤을 많이 내려보세요!</div>
+  </div>
+</body>
+</html>

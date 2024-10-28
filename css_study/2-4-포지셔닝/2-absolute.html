@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      margin: 100px;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background: orange;
+      border: 4px dashed red;
+      font-size: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box:nth-child(2){
+      background: yellowgreen;
+      /* 절대위치에서 이동, 부모의 포지션 기준
+         (가까운 부모중 position속성이 있는 부모 기준. 없으면 body)
+         z축앞으로 튀어나온 모양 (원래자리가 비니까 채워짐)*/
+
+         /* defalt : static (포지션 없는상태. 기준점) */
+      position: absolute;
+      left: 50px;
+      top: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <box class="box">1</box>
+    <box class="box">2</box>
+    <box class="box">3</box>
+  </div>
+</body>
+</html>

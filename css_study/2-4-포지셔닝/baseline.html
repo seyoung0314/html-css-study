@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header{
+      border: 1px solid #000;
+      width: 500px;
+      height: 500px;
+      display: flex;
+    }
+    .a{
+      display: flex;
+      /* align-items: baseline; */
+      /* last baseline은 요소중 큰걸 기준으로 아래에 붙이고
+          flex-end는 그냥 무조건 아래로 붙임 */
+      /* align-items: last baseline */
+      align-items: flex-end;
+    }
+    .b{
+      display: flex;
+      /* align-items: baseline; */
+    }
+    .ina{
+      background: rebeccapurple;
+      font-size: 36px;
+    }
+    .inb{
+      background: green;
+    }
+    .inc{
+      background: gold;
+      font-size: 70px;
+    }
+    .ind{
+      background: salmon;
+      font-size: 20px;
+    }
+    /* .a *{
+      background: white !important;
+    } */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="a">
+      <div class="ina">가나다</div>
+      <div class="inb">라마바</div>
+    <!-- </div>
+    <div class="b"> -->
+      <div class="inc">가나다</div>
+      <div class="ind">라마바</div>
+    </div>
+  </header>
+</body>
+</html>

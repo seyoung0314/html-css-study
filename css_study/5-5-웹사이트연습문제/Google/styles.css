@@ -1,0 +1,68 @@
+@import url(../reset.css);
+
+body{
+  height: 100vh;
+}
+header{
+  position: fixed;
+  right: 0;
+  top: 1%;
+  width: 100%;
+  font-size: 16px;
+}
+header ul{
+  /* background: orange; */
+  display: flex;
+  justify-content: end;
+}
+header ul li{
+  /* border: 1px solid #000; */
+  padding-left: 1%;
+}
+main{
+  /* background: yellow; */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .logo{
+  width: 300px;
+  /* background: green; */
+  margin: 10% auto 2%;
+}
+main .search-bar{
+  margin-bottom: 1%;
+}
+main .search-bar input{
+  width: 300px;
+  height: 40px;
+  padding-left: 1vw;
+  font-size : inherit;
+  
+  border: 1px solid lightgrey;
+  border-radius: 30px;
+  box-shadow: 0 4px 5px lightgrey;
+}
+main .buttons button{
+  background: rgba(0, 0, 0, 0);
+  border-style: none;
+  font-size: 1em;
+  font-weight: 700;
+  margin: auto 1.4vw;
+}
+footer{
+  height: 4%;
+}
+footer .footer-left{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+footer .footer-right{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
